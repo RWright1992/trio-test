@@ -21,6 +21,6 @@ services:
   mysql:
     build: ./db
     image: rwright1992/trio-db-jenkins
-    environement:
+    environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
