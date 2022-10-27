@@ -10,6 +10,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
+                sh 'docker swarm init'
                 sh 'docker stack deploy --compose-file docker-compose.yaml teststack'
             }
         }
