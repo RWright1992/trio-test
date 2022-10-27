@@ -15,12 +15,12 @@ services:
     - "flask-app"
   flask-app:
     build: ./flask-app
-    image: rwright1992/trio-app-jenkins
+    image: rwright1992/trio-app-jenkins:test
     depends_on:
     - "mysql"
   mysql:
     build: ./db
-    image: rwright1992/trio-db-jenkins
+    image: rwright1992/trio-db-jenkins:test
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
